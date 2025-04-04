@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <RootNamespace>Teste.Tecnologia.Infrastructure.IoC</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="13.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="9.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Teste.Tecnologia.Domain\Teste.Tecnologia.Domain.csproj" />
+    <ProjectReference Include="..\Teste.Tecnologia.Infrastructure.Data\Teste.Tecnologia.Infrastructure.Data.csproj" />
+    <ProjectReference Include="..\Teste.Tecnologia.Infrastructure.Events\Teste.Tecnologia.Infrastructure.Events.csproj" />
+  </ItemGroup>
+
+</Project>

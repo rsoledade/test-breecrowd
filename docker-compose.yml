@@ -1,0 +1,22 @@
+services:
+  # Serviço para o PostgreSQL
+  postgres:
+    image: postgres:13
+    container_name: clienteapi_postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: clienteapi
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    networks:
+      - clienteapi-network  
+
+volumes:
+  postgres-data:
+
+networks:
+  clienteapi-network:
+    driver: bridge
